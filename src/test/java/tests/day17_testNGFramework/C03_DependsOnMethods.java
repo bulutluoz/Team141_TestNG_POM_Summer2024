@@ -54,13 +54,23 @@ public class C03_DependsOnMethods {
         boylece onceki test calisip PASSED olmazsa
         sonraki test(ler) direk IGNORE edilir ve HIC CALISTIRILMAZ
 
+        1- dependsOnMethods bir siralama yontemi degildir
+           ama sira kendine gelen bir method baska bir method'a baglanmissa
+           onceligi ona verir
 
+        2- Biz test method'larini bagimsiz olarak calistirabiliriz
+           Ancak bir method'u bagimsiz olarak calistirmak istedigimizde
+           o method dependsOnMethods ile baska bir method'a baglanmissa
+           once bagli oldugu method'un calismasini saglar
+           ANCAK bu calisma 2 method icindir, daha fazla method birbirini calistirmaz
      */
 
     @Test
-    public void anasayfaTesti(){
+    public void anasayfaTesti()  {
+
+
         // 1- testotomasyonu anasayfaya gidin
-        driver.get("https://www.youtube.com");
+        driver.get("https://www.testotomasyonu.com");
 
         // ve sayfaya gittiginizi test edin
         // url'in testotomasyonu icerdigini test edelim
