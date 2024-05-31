@@ -18,9 +18,11 @@ public class Driver {
 
     public static WebDriver getDriver(){
 
-        driver = new ChromeDriver();
-        driver.manage().window().maximize();
-        driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(10));
+        if (driver == null){
+            driver = new ChromeDriver();
+            driver.manage().window().maximize();
+            driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(10));
+        }
 
         return driver;
 
@@ -29,5 +31,6 @@ public class Driver {
 
     public static void quitDriver(){
         driver.quit();
+        driver =null;
     }
 }
