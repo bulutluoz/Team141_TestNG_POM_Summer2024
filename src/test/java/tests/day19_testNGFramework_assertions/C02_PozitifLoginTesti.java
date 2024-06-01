@@ -5,6 +5,7 @@ import org.testng.annotations.Test;
 import pages.TestotomasyonuPage;
 import utilities.ConfigReader;
 import utilities.Driver;
+import utilities.ReusableMethods;
 
 public class C02_PozitifLoginTesti {
 
@@ -15,6 +16,7 @@ public class C02_PozitifLoginTesti {
         Driver.getDriver().get(ConfigReader.getProperty("toUrl"));
         //2- account linkine basin
         TestotomasyonuPage testotomasyonuPage = new TestotomasyonuPage();
+        ReusableMethods.bekle(1);
         testotomasyonuPage.accountLinki.click();
 
         //3- Kullanici email'i olarak gecerli email girin
@@ -26,7 +28,7 @@ public class C02_PozitifLoginTesti {
         testotomasyonuPage
                 .loginPasswordKutusu
                 .sendKeys(ConfigReader.getProperty("toGecerliPassword"));
-
+        ReusableMethods.bekle(1);
         //5- Login butonuna basarak login olun
         testotomasyonuPage
                 .loginSiginButonu
