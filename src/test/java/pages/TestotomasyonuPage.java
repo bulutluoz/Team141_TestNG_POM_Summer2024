@@ -29,4 +29,19 @@ public class TestotomasyonuPage {
     @FindBy(className = "prod-img")
     public List<WebElement> sonucElementleriList;
 
+    @FindBy(xpath = "//span[text()='Account']")
+    public WebElement accountLinki;
+
+    @FindBy(id = "email")
+    public WebElement loginEmailKutusu;
+
+    @FindBy(id = "password")
+    public WebElement loginPasswordKutusu;
+
+    @FindBy(id = "submitlogin")
+    public WebElement loginSiginButonu;
+
+    @FindBy(xpath = "//span[text()='Logout']")
+    public WebElement logOutButonu;
+
 }
