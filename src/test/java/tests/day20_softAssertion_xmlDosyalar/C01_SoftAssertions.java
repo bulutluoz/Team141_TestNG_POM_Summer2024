@@ -1,4 +1,4 @@
-package tests.softAssertion_xmlDosyalar;
+package tests.day20_softAssertion_xmlDosyalar;
 
 import org.openqa.selenium.Keys;
 import org.testng.annotations.Test;
