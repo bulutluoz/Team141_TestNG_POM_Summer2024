@@ -19,7 +19,7 @@ public class C03_NegatifLoginTesti {
     //5- Basarili olarak giris yapilamadigini test edin
 
 
-    @Test
+    @Test (groups = "smoke")
     public void gecersizPasswordTesti(){
 
         //1- https://www.testotomasyonu.com/ anasayfasina gidin

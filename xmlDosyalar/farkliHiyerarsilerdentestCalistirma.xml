@@ -1,0 +1,30 @@
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+
+<!--
+    GOREV 1 :   day17 package'inin tamamini
+                day18'den C02 ve C04
+                day19'dan C03'deki gecersizPasswordTesti'ni
+                toplu olarak calistirin
+-->
+
+<suite name="farkli hiyerarsilerden test calistirma">
+    <test name="D1 testi">
+
+        <packages>
+            <package name="tests.day17_testNGFramework"></package>
+        </packages>
+
+        <classes>
+            <class name="tests.day18_testNGFrameworkHazirlama.C02_PageClassKullanimi"></class>
+            <class name="tests.day18_testNGFrameworkHazirlama.C04_FormDoldurma"></class>
+
+            <class name="tests.day19_testNGFramework_assertions.C03_NegatifLoginTesti">
+                <methods>
+                    <include name="gecersizPasswordTesti"></include>
+                </methods>
+            </class>
+
+        </classes>
+
+    </test>
+</suite>

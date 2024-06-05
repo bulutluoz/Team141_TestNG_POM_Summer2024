@@ -12,7 +12,7 @@ import java.util.List;
 
 public class C04_FormDoldurma {
 
-    @Test
+    @Test (groups = "smoke")
     public void formDoldurmaTesti(){
 
         //1 - https://testotomasyonu.com/form adresine gidin

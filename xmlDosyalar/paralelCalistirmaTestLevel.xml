@@ -1,0 +1,34 @@
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+
+<!--
+    GOREV 8 :   day18 ve day19 package'larindaki tum class'lari
+                ayni anda 2 browser calisacak sekilde
+                paralel olarak calistirin
+
+         - paralel calistirmada once paralel calistirma yokmus gibi istenen testleri hazirlayalim
+         - parallel calismada kac browser'in calisacagina ve
+         - aralarindaki gorev palasimini neye gore yapacaklarini belirleyelim
+           (method, class, test)
+
+
+           verbose toplu calisma sonucunda
+           konsolda yazdirilan aciklama satirlarinin daha az veya daha cok olmasini kontrol eder
+           1 en az, 10 en cok olacak sekilde bir secim yapabilirsiniz
+-->
+
+
+<suite name="paralel calistirma test level" parallel="tests" thread-count="2" verbose="4">
+
+    <test name="paralel test 1.browser">
+        <packages>
+            <package name="tests.day18_testNGFrameworkHazirlama"></package>
+        </packages>
+    </test>
+    
+    <test name="paralel test 2.browser">
+        <packages>
+            <package name="tests.day19_testNGFramework_assertions"></package>
+        </packages>
+    </test>
+
+</suite>

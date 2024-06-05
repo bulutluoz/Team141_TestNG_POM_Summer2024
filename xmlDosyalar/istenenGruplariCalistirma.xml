@@ -1,0 +1,41 @@
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+
+
+<!--
+    GOREV 5 :   Smoke Test
+                day17 C02'deki wiseQuarterTesti
+                day18'den C02 ve C04
+                day19'dan C01
+                day19'dan C03'deki gecersizPasswordTesti'ni
+                day20'den C01 ve C02
+                toplu olarak calistirin
+                
+                EGER package,class ve test method'larini .xml dosyasindan tek tek secmek istemezsek
+                TestNG bize alternatif olarak test method'larina groups bilgisi yazma imkani verir
+                Boylece biz istedigimiz gruplari calistirip,
+                istedigimiz gruplarin calismamasini saglayabiliriz
+                
+                Bunun icin <test> 'in icinde 
+                    hem calisacak/calismayacak gruplari
+                    hem de bu gruplari nerede bulacagimizi belirlemeliyiz
+-->
+
+<suite name="istenen gruplari calistirma">
+    <test name="Smoke test">
+        
+        <groups>
+            <run>
+                <include name="smoke"></include>
+                <exclude name="E2E"></exclude>
+            </run>
+        </groups>
+        
+        <packages>
+            <package name="tests.*"></package>
+        </packages>
+        
+        
+        
+        
+    </test>
+</suite>

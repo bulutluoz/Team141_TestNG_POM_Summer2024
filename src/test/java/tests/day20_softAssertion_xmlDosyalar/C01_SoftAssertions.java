@@ -16,7 +16,7 @@ public class C01_SoftAssertions {
            assertAll() calistir.
      */
 
-    @Test
+    @Test (groups = "smoke")
     public void aramaTesti(){
 
         // testotomasyonu anasayfaya gidin

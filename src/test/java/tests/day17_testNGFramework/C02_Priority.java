@@ -64,7 +64,7 @@ public class C02_Priority {
         Assert.assertTrue(actualUrl.contains(expectedUrlIcerik));
     }
 
-    @Test (priority = -17)
+    @Test (priority = -17,groups = "smoke")
     public void wisequarterTesti(){
 
         driver.get("https://www.wisequarter.com");
