@@ -25,7 +25,7 @@ public class C01_RaporluAramaTesti extends TestBaseRapor {
         extentTest.info("belirlenen arama kelimesi icin arama yapar");
         // arama sonucunda urun bulunabildigini test edin
 
-        Assert.assertTrue(testotomasyonuPage.sonucElementleriList.size()>80);
+        Assert.assertTrue(testotomasyonuPage.sonucElementleriList.size()>0);
         extentTest.pass("arama sonucunda urun bulunabildigini test eder");
     }
 }

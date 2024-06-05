@@ -12,8 +12,8 @@
 
         <packages>
 
-            <package name="tests.day17_testNGFramework"></package>
-            <package name="tests.day18_testNGFrameworkHazirlama"></package>
+            <package name="tests.day21_xmlFiles_HtmlReports"></package>
+
 
         </packages>
 
