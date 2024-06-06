@@ -5,6 +5,7 @@ import org.openqa.selenium.WebElement;
 import org.testng.Assert;
 import org.testng.annotations.Test;
 import utilities.ConfigReader;
+import utilities.ReusableMethods;
 import utilities.TestBaseCross;
 
 public class C02_PozitifLoginTesti extends TestBaseCross {
@@ -16,6 +17,7 @@ public class C02_PozitifLoginTesti extends TestBaseCross {
         driver.get(ConfigReader.getProperty("toUrl"));
 
         //2- account linkine basin
+        ReusableMethods.bekle(1);
         driver.findElement(By.xpath("//span[text()='Account']"))
                 .click();
 
@@ -28,6 +30,7 @@ public class C02_PozitifLoginTesti extends TestBaseCross {
         passwordKutusu.sendKeys(ConfigReader.getProperty("toGecerliPassword"));
 
         //5- Login butonuna basarak login olun
+        ReusableMethods.bekle(1);
         driver.findElement(By.id("submitlogin"))
                 .click();
 

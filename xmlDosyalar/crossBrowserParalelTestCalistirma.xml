@@ -1,0 +1,30 @@
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+
+
+<!--
+    GOREV 9 :   day22 crossBrowser ile calisacak testler package'indaki
+                tum class'lari cross browser ve paralel olarak
+                hem chrome hem de firefox ile calistirin
+-->
+
+<suite name="istenenClasslariCalistirma" parallel="tests" thread-count="2">
+
+
+    <test name="Chrome ile calisacak classlar">
+        <parameter name="kullanilacakBrowser" value="chrome"></parameter>
+        <classes>
+            <class name="tests.day22_crossBrowserCalisacakTestler.C01_AramaTesti"></class>
+            <class name="tests.day22_crossBrowserCalisacakTestler.C02_PozitifLoginTesti"></class>
+        </classes>
+    </test>
+
+
+    <test name="firefox ile calisacak testler">
+        <parameter name="kullanilacakBrowser" value="firefox"></parameter>
+        <classes>
+            <class name="tests.day22_crossBrowserCalisacakTestler.C01_AramaTesti"></class>
+            <class name="tests.day22_crossBrowserCalisacakTestler.C02_PozitifLoginTesti"></class>
+        </classes>
+    </test>
+
+</suite>
