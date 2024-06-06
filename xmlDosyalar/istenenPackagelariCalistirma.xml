@@ -14,7 +14,6 @@
 
             <package name="tests.day21_xmlFiles_HtmlReports"></package>
 
-
         </packages>
 
     </test>
