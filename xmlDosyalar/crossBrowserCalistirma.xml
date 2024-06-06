@@ -1,0 +1,47 @@
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+
+<!--
+    CrossBrowser testler
+    uygulamamizin istenen tum browser'lar ile saglikli olarak calistigini
+    kontrol etmek amaciyla calistirilir
+
+    CrossBrowser calistirmak istedigimiz test class'lari
+    disardan browser secimi yapmaya uygun olmalidir
+    Bunun icin de cok ozel bir dizayn yapmamiz gerekir
+
+    Yanii,
+    Crossbrowser testler, tum class'lar icin degil
+    ozel olarak secilmis sinirli sayida class'i
+    cross browser calismaya uygun olarak hazirlayip
+    bu testleri calistirma demektir.
+
+-->
+
+
+<!--
+    GOREV 8 :   day22 crossBrowser ile calisacak testler package'indaki
+                tum class'lari cross browser olarak
+                hem chrome hem de firefox ile calistirin
+-->
+
+<suite name="istenenClasslariCalistirma">
+
+
+    <test name="Chrome ile calisacak classlar">
+        <parameter name="kullanilacakBrowser" value="chrome"></parameter>
+        <classes>
+            <class name="tests.day22_crossBrowserCalisacakTestler.C01_AramaTesti"></class>
+            <class name="tests.day22_crossBrowserCalisacakTestler.C02_PozitifLoginTesti"></class>
+        </classes>
+    </test>
+
+
+    <test name="firefox ile calisacak testler">
+        <parameter name="kullanilacakBrowser" value="firefox"></parameter>
+        <classes>
+            <class name="tests.day22_crossBrowserCalisacakTestler.C01_AramaTesti"></class>
+            <class name="tests.day22_crossBrowserCalisacakTestler.C02_PozitifLoginTesti"></class>
+        </classes>
+    </test>
+
+</suite>
